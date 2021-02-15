@@ -1,4 +1,5 @@
 package backend;
+import java.util.*;
 
 public class elcruzer 
 {
@@ -51,7 +52,47 @@ public class elcruzer
 			value = value * one;
 		}
 		System.out.println(value);
+		
+		
+		Map<String, String> map1 = new HashMap<>();
+		List<Integer> testlist = new ArrayList<Integer>();
+		//testlist.createListWithEveryOtherElement();
+		
 	}
 
+	public List<String> getValuesFromMapWhereKeyStartsWithA(Map<String, String> map) {
+		//Map<String, String> map1 = new HashMap<>();
+		List<String> list = new ArrayList<String>();
+
+		map.forEach((k, v ) ->
+		{
+			list.add(v);
+		});
+		
+		return list;
+
+	}
+	
+	public List createListWithEveryOtherElement(List list) 
+	{
+		List copy = new ArrayList<>();
+		int size = list.size();
+		copy.addAll(list);
+		for(int i = 1; i <= size; i++)
+		{
+			i = i + 1;
+			
+			copy.remove(i);
+		}
+		
+		return copy;
+		/*int size = list.size();
+		for(int i = 0; i <= size; i++)
+		{
+			i = i + 1;
+			list2.add(i);
+		}
+		*/
+	}
 	
 }
